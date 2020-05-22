@@ -1,0 +1,28 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  box-sizing: border-box;
+}
+body {
+  background: whitesmoke;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn{
+  background: #4E4E4E;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: none;
+
+}
+.btn-apply:hover {
+  box-shadow: 0 0 2px #ccc;
+}

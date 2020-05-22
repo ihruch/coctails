@@ -1,0 +1,42 @@
+.wrapper {
+ padding: 40px 50px 0;
+}
+.title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: normal;
+  color: #818181;
+  border-bottom: 1px solid #D0D0D0;
+  padding-bottom: 5px;
+}
+.inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+.card {
+  flex: 0 0 calc(100% / 5);
+  text-align: center;
+  padding: 0 10px;
+}
+.card .card-title {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px 5px 25px;
+}
+
+img{
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.block-action {
+  display: flex;
+  justify-content: flex-end;
+}
+.btb-more {
+  width: 100px;
+  height: 40px
+}

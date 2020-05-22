@@ -1,0 +1,17 @@
+<nav class="inner-nav ">
+  <form [formGroup]="form" (ngSubmit)="submit()" *ngIf="list.length">
+    <ng-container >
+      <ul>
+        <li
+          formArrayName="orders"
+          *ngFor="let order of form.controls.orders['controls'] ; let ind = index">
+          <mat-checkbox [formControlName]="ind">
+            {{list[ind].strCategory}}
+          </mat-checkbox>
+        </li>
+      </ul>
+      <div *ngIf="!form.valid" class="mat-error">At least one category must be select</div>
+      <button type="submit" class="btn btn-apply" [disabled]="!form.valid">Apply</button>
+    </ng-container>
+  </form>
+</nav>

@@ -1,0 +1,19 @@
+
+.inner-nav {
+  flex: 0 0 250px;
+  min-height: 100vh;
+
+  border-right:  1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 20px 25px;
+
+}
+.btn-apply {
+  margin: 20px auto;
+  width: 180px;
+  height: 40px
+}
+
+.btn-apply[disabled] {
+  cursor: not-allowed;
+}
