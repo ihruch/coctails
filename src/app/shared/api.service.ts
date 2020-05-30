@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { pluck } from 'rxjs/operators';
 import {forkJoin, Subject} from 'rxjs';
+import {Category} from './models/category.model';
 
 
 @Injectable({
@@ -20,7 +21,7 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  setData(data) {
+  setData(data: Category[]) {
     this.data$.next(data);
   }
 
@@ -34,13 +35,12 @@ export class ApiService {
   }
 
   getDrinks() {
-//    console.log('getDrinks ', this.listCoctails);
     const list = this.listCoctails.map( i => this.http.get(`${this.mainURL}${this.listDrinks}${i}`)
                     .pipe(pluck('drinks')));
 
     forkJoin(...list).subscribe( data => {
       this.setData(data.map( (val, ind) => ({name: this.listCoctails[ind], data: val, count: 10})));
-     });
+    });
   }
 
 }
